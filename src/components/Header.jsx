@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const contactNumber = '7769941729';
+  const contactNumber = '9921256882';
 
   const navLinks = [
     { path: '/', label: 'Home' },

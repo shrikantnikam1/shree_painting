@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  const contactNumber = '7769941729';
+  const contactNumber = '9921256882';
   const address = 'Pimpari Chinchwad - 411017';
   const email = 'shreepaintingservices@gmail.com';
 
