@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
-  const contactNumber = '9921256882';
+  const contactNumber = '7769941729';
   
   const teamMembers = [
     {

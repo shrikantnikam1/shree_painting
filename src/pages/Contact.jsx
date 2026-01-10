@@ -12,7 +12,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const contactNumber = '9921256882';
+  const contactNumber = '7769941729';
   const address = 'Pimpari Chinchwad - 411017';
   const email = 'shreepaintingservices@gmail.com';
 
