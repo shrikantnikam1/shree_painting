@@ -6,19 +6,19 @@ const About = () => {
   
   const teamMembers = [
     {
-      name: "Shrikant Nikam",
+      name: "Pravin Salunkhe",
       role: "Founder & Lead Contractor",
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
       experience: "10+ Years"
     },
     {
-      name: "Rajesh Kumar",
+      name: "Amol Salunkhe",
       role: "Senior Painter",
       image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300",
       experience: "8+ Years"
     },
     {
-      name: "Amit Patil",
+      name: "Vaibhav Salunkhe",
       role: "Waterproofing Specialist",
       image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300",
       experience: "7+ Years"
