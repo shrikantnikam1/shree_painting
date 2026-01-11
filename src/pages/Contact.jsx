@@ -58,6 +58,7 @@ const Contact = () => {
         throw new Error(result.error || 'Failed to send message');
       }
     } catch (error) {
+      console.error(error);
       setSubmitStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try calling us directly.'
@@ -74,15 +75,15 @@ const Contact = () => {
         <div 
           className="absolute inset-0 bg-black/30 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/7578830/pexels-photo-7578830.jpeg?auto=compress&cs=tinysrgb&w=1200')"
+            backgroundImage: "url(https://plus.unsplash.com/premium_photo-1683141043361-b927d1cb8694?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
           }}
         ></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-md">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-white/90">
               Ready to transform your space? Get in touch with us for a free consultation and quote.
             </p>
           </div>

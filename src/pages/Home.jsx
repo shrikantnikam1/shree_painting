@@ -27,17 +27,17 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Rajesh Sharma",
+      name: "Shrikant Nikam",
       comment: "Excellent work! Very professional team and quality service.",
       rating: 5
     },
     {
-      name: "Priya Patel",
+      name: "Priyanka Patel",
       comment: "Great waterproofing work. No leaks after the monsoon!",
       rating: 5
     },
     {
-      name: "Amit Kumar",
+      name: "Abhijeet Deshmukh",
       comment: "Beautiful interior painting. Highly recommend their services.",
       rating: 5
     }

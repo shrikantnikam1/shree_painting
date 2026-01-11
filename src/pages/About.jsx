@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import amolImg from '../img/amol.jpeg';
 
 const About = () => {
   const contactNumber = '7769941729';
@@ -14,7 +15,7 @@ const About = () => {
     {
       name: "Amol Salunkhe",
       role: "Senior Painter",
-      image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300",
+      image: amolImg,
       experience: "8+ Years"
     },
     {
