@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import amolImg from '../img/amol.jpeg';
 import vaibhavImg from '../img/vaibhav-waterprofing-pic.jpeg';
 import pravinImg from '../img/pravin-founder.jpeg';
-import logoImg from '../img/shreepainting-logo.png';
+import logo2 from '../img/shreepainting-logo.png';
 
 const About = () => {
   const contactNumber = '7769941729';
@@ -48,7 +48,7 @@ const About = () => {
         ></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-3xl text-center">
-            <img src={logoImg} alt="Shree Painting Logo" className="h-20 mx-auto mb-4" />
+            <img src={logo2} alt="Shree Painting Logo" className="h-20 mx-auto mb-4" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About Shree Painting & Waterproofing Services
             </h1>
@@ -76,7 +76,7 @@ const About = () => {
                 </p>
                 <p>
                   What started as a one-man operation has grown into a trusted team of skilled professionals 
-                  serving Pimpari Chinchwad and surrounding areas. We've completed over 1,500 projects, 
+                  serving Pimpari Chinchwad and surrounding areas. We've completed over 500 projects, 
                   ranging from residential homes to commercial buildings.
                 </p>
                 <p>
