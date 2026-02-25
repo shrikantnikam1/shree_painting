@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoImg from '../img/shreepainting-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +20,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <img 
-              src="/src/img/header-shree-logo.png" 
-              alt="Shree Logo" 
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              src={logoImg} 
+              alt="Shree Painting Logo" 
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105 hover:brightness-110 cursor-pointer"
             />
           </Link>
 

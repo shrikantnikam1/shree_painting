@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import amolImg from '../img/amol.jpeg';
+import vaibhavImg from '../img/vaibhav-waterprofing-pic.jpeg';
+import pravinImg from '../img/pravin-founder.jpeg';
+import logoImg from '../img/shreepainting-logo.png';
 
 const About = () => {
   const contactNumber = '7769941729';
@@ -9,8 +12,8 @@ const About = () => {
     {
       name: "Pravin Salunkhe",
       role: "Founder & Lead Contractor",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300",
-      experience: "10+ Years"
+      image: pravinImg,
+      experience: "12+ Years"
     },
     {
       name: "Amol Salunkhe",
@@ -21,14 +24,14 @@ const About = () => {
     {
       name: "Vaibhav Salunkhe",
       role: "Waterproofing Specialist",
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300",
+      image: vaibhavImg,
       experience: "7+ Years"
     }
   ];
 
   const achievements = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "10+", label: "Years Experience" },
+    { number: "1500+", label: "Projects Completed" },
+    { number: "12+", label: "Years Experience" },
     { number: "100%", label: "Client Satisfaction" },
     { number: "50+", label: "Repeat Customers" }
   ];
@@ -44,12 +47,13 @@ const About = () => {
           }}
         ></div>
         <div className="relative container-custom section-padding">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl text-center">
+            <img src={logoImg} alt="Shree Painting Logo" className="h-20 mx-auto mb-4" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About Shree Painting & Waterproofing Services
             </h1>
             <p className="text-xl text-gray-200">
-              With over a decade of experience in the painting and waterproofing industry, 
+              With over 12 years of experience in the painting and waterproofing industry, 
               we've built our reputation on quality workmanship and customer satisfaction.
             </p>
           </div>
@@ -72,7 +76,7 @@ const About = () => {
                 </p>
                 <p>
                   What started as a one-man operation has grown into a trusted team of skilled professionals 
-                  serving Pimpari Chinchwad and surrounding areas. We've completed over 500 projects, 
+                  serving Pimpari Chinchwad and surrounding areas. We've completed over 1,500 projects, 
                   ranging from residential homes to commercial buildings.
                 </p>
                 <p>
