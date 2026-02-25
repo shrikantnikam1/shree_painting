@@ -17,14 +17,12 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-800">Shree Painting</h1>
-              <p className="text-xs text-gray-600">& Waterproofing Services</p>
-            </div>
+          <Link to="/" className="flex items-center space-x-2 group">
+            <img 
+              src="/src/img/header-shree-logo.png" 
+              alt="Shree Logo" 
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Contact Info - Desktop */}
