@@ -1,0 +1,171 @@
+/* Interactive Button Component Styles */
+
+.interactive-button-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 40;
+}
+
+.interactive-button {
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.interactive-button.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover Effect */
+.interactive-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.interactive-button:hover .button-glow {
+  animation: glow-pulse 0.6s ease-in-out forwards;
+}
+
+.interactive-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Button text animation on hover */
+.button-text {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.interactive-button:hover .button-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Glow effect */
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0;
+  border-radius: 50px;
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Scroll Progress Bar */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(102, 126, 234, 0.1);
+  z-index: 50;
+}
+
+.scroll-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+/* Mobile Responsive */
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .interactive-button-container {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .interactive-button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .interactive-button:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-button-container {
+    bottom: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: calc(100% - 2rem);
+  }
+
+  .interactive-button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 48px;
+    min-width: 120px;
+    white-space: nowrap;
+  }
+
+  .interactive-button:hover {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  .button-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .interactive-button-container {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .interactive-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    min-height: 44px;
+    min-width: 100px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .scroll-indicator {
+    background-color: rgba(102, 126, 234, 0.15);
+  }
+}

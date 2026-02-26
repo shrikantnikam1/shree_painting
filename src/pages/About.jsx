@@ -48,8 +48,8 @@ const About = () => {
         ></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-3xl text-center">
-            <img src={logo2} alt="Shree Painting Logo" className="h-20 mx-auto mb-4" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <img src={logo2} alt="Shree Painting Logo" className="h-20 mx-auto mb-4" data-aos="fade-down" />
+            <h1 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1000">
               About Shree Painting & Waterproofing Services
             </h1>
             <p className="text-xl text-gray-200">
@@ -64,7 +64,7 @@ const About = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div data-aos="fade-right" data-aos-duration="1000">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                 Our Story
               </h2>
@@ -86,7 +86,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-duration="1000">
               <img 
                 src="https://images.pexels.com/photos/5691660/pexels-photo-5691660.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Our team at work"
@@ -101,17 +101,17 @@ const About = () => {
       <section className="section-padding bg-gray-100">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
               Our Achievements
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="200">
               Numbers that speak for our commitment to excellence
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" data-aos="zoom-in-up" data-aos-delay={`${index * 150}`}>
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                     {achievement.number}
@@ -130,17 +130,17 @@ const About = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
               Our Expert Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               Meet our skilled professionals who bring years of experience and dedication to every project.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="card-style text-center">
+              <div key={index} className="card-style text-center" data-aos="flip-right" data-aos-delay={`${index * 200}`}>
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                   <img 
                     src={member.image} 
@@ -161,16 +161,16 @@ const About = () => {
       <section className="section-padding bg-primary text-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">
               Our Values
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-gray-200" data-aos="fade-up" data-aos-delay="200">
               The principles that guide everything we do
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="100">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -182,7 +182,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="200">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
@@ -194,7 +194,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-delay="300">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -212,7 +212,7 @@ const About = () => {
       {/* CTA Section */}
       <section className="section-padding bg-secondary text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="zoom-in" data-aos-duration="1000">
             Ready to Work With Us?
           </h2>
           <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
