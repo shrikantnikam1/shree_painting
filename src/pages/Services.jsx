@@ -38,8 +38,8 @@ const Services = () => {
     <div className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">Our Services</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             We offer professional painting and waterproofing solutions tailored to your needs.
           </p>
         </div>
@@ -47,10 +47,10 @@ const Services = () => {
           <img
             src={paintingImg}
             alt="Painting service"
-            className="rounded-lg shadow-lg w-full max-w-lg object-cover"
+            className="rounded-lg shadow-lg w-full max-w-lg object-cover" data-aos="zoom-in" data-aos-duration="1000"
           />
         </div>
-        <div className="mt-12 space-y-6 text-gray-700 max-w-2xl mx-auto">
+        <div className="mt-12 space-y-6 text-gray-700 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
           <p>
             From interior and exterior painting to full property refreshes, our skilled team
             uses premium materials to deliver a flawless finish. We also provide waterproofing
@@ -66,7 +66,7 @@ const Services = () => {
         </div>
 
         {/* Amol profile section */}
-        <div className="mt-20 bg-gray-50 py-12">
+        <div className="mt-20 bg-gray-50 py-12" data-aos="zoom-in-up" data-aos-duration="1000">
           <div className="container-custom flex flex-col md:flex-row items-center gap-8">
             <img
               src={amolImg}
@@ -91,7 +91,7 @@ const Services = () => {
         {/* Testimonials carousel */}
         <div className="mt-20">
           <div className="container-custom text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">Clients Who Were Impressed</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-8" data-aos="fade-up">Clients Who Were Impressed</h2>
             <TestimonialCarousel />
           </div>
         </div>
