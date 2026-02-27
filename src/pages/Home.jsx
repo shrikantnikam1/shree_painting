@@ -266,7 +266,7 @@ const Home = () => {
             </div>
             <div data-aos="zoom-in" data-aos-duration="1000">
               <img 
-                src="https://images.pexels.com/photos/3951996/pexels-photo-3951996.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Professional painting service in action"
                 className="rounded-xl shadow-2xl border-4 border-orange-200"
               />
