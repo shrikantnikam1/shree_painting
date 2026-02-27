@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
   const contactNumber = '7769941729';
 
   const services = [
@@ -40,13 +41,80 @@ const Home = () => {
       name: "Abhijeet Deshmukh",
       comment: "Beautiful interior painting. Highly recommend their services.",
       rating: 5
+    },
+    {
+      name: "Rajesh Kadam",
+      comment: "The team was punctual and left everything clean. Great job!",
+      rating: 5
+    },
+    {
+      name: "Sneha Sawant",
+      comment: "Transformed our home with excellent color choices and finishing.",
+      rating: 5
+    },
+    {
+      name: "Vilas Kulkarni",
+      comment: "Professional service from start to finish. Very impressed with the quality.",
+      rating: 5
+    },
+    {
+      name: "Anjali Jadhav",
+      comment: "Best painting service in the area. Highly professional and reliable.",
+      rating: 5
+    },
+    {
+      name: "Ashok Patil",
+      comment: "Exceptional work quality. Would definitely hire them again.",
+      rating: 5
+    },
+    {
+      name: "Pooja Nair",
+      comment: "The waterproofing they did has completely solved our moisture issues.",
+      rating: 5
+    },
+    {
+      name: "Suresh Rao",
+      comment: "Great communication, timely completion, and outstanding results.",
+      rating: 5
+    },
+    {
+      name: "Meera Sharma",
+      comment: "Professional team with attention to detail. Very satisfied customer.",
+      rating: 5
+    },
+    {
+      name: "Ravi Iyer",
+      comment: "Excellent exterior painting. The house looks brand new!",
+      rating: 5
+    },
+    {
+      name: "Deepa Maharashtra",
+      comment: "Quality materials, skilled workers, and fair pricing. Highly recommended!",
+      rating: 5
     }
   ];
+
+  const getVisibleTestimonials = () => {
+    const visibleCount = 3;
+    const items = [];
+    for (let i = 0; i < visibleCount; i++) {
+      items.push(testimonials[(testimonialIndex + i) % testimonials.length]);
+    }
+    return items;
+  };
+
+  const getPrevTestimonials = () => {
+    setTestimonialIndex((prev) => (prev === 0 ? testimonials.length - 3 : prev - 1));
+  };
+
+  const getNextTestimonials = () => {
+    setTestimonialIndex((prev) => (prev === testimonials.length - 3 ? 0 : prev + 1));
+  };
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary to-primary/80 text-white">
+      <section className="relative bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 text-white">
         <div 
           className="absolute inset-0 bg-black/20 bg-cover bg-center"
           style={{
@@ -63,12 +131,12 @@ const Home = () => {
               Serving Pimpari Chinchwad and surrounding areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="btn-secondary inline-block text-center">
+              <Link to="/contact" className="px-8 py-3 bg-white text-orange-600 rounded-lg hover:bg-opacity-90 font-semibold inline-block text-center hover:shadow-lg transition-all duration-300">
                 Get Free Quote
               </Link>
               <a 
                 href={`tel:${contactNumber}`} 
-                className="btn-primary inline-block text-center bg-white text-primary hover:bg-gray-100"
+                className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 font-semibold inline-block text-center transition-all duration-300"
               >
                 Call Now: {contactNumber}
               </a>
@@ -91,12 +159,12 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="card-style group" data-aos="fade-up" data-aos-delay={`${index * 200}`}>
-                <div className="h-48 bg-gray-200 rounded-lg mb-4 overflow-hidden">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-2xl hover:scale-105 border-l-4 border-orange-600 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={`${index * 200}`}>
+                <div className="h-48 bg-gray-200 rounded-lg mb-4 overflow-hidden border-2 border-orange-200">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
@@ -104,7 +172,7 @@ const Home = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2">
-                      <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-gray-700">{feature}</span>
@@ -118,7 +186,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-gray-100">
+      <section className="section-padding bg-gradient-to-b from-amber-50 to-orange-50">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -127,7 +195,7 @@ const Home = () => {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="100">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -138,7 +206,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="200">
-                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -149,7 +217,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="300">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
@@ -165,7 +233,7 @@ const Home = () => {
               <img 
                 src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Professional painting work"
-                className="rounded-lg shadow-lg w-full"
+                className="rounded-lg shadow-lg w-full border-4 border-orange-200"
               />
             </div>
           </div>
@@ -173,7 +241,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-b from-white to-amber-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
@@ -184,26 +252,59 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="card-style text-center" data-aos="flip-left" data-aos-delay={`${index * 200}`}>
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+          <div className="relative mb-8">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              {getVisibleTestimonials().map((testimonial, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl border-t-4 border-orange-500 transition-all duration-300" data-aos="flip-left" data-aos-delay={`${index * 100}`}>
+                  <div className="flex justify-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4 italic min-h-20">"{testimonial.comment}"</p>
+                  <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
                 </div>
-                <p className="text-gray-600 mb-4 italic">"{testimonial.comment}"</p>
-                <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
+              ))}
+            </div>
+
+            {/* Carousel Navigation */}
+            <div className="flex justify-center items-center gap-6">
+              <button 
+                onClick={getPrevTestimonials}
+                className="px-6 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold"
+              >
+                ← Back
+              </button>
+              
+              <div className="flex gap-2">
+                {[...Array(Math.ceil(testimonials.length / 3))].map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setTestimonialIndex(index * 3 % testimonials.length)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === Math.floor(testimonialIndex / 3)
+                        ? 'bg-gradient-to-r from-orange-600 to-red-600 w-8'
+                        : 'bg-gray-300'
+                    }`}
+                  />
+                ))}
               </div>
-            ))}
+
+              <button 
+                onClick={getNextTestimonials}
+                className="px-6 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 font-semibold"
+              >
+                Next →
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary text-white">
+      <section className="section-padding bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="zoom-in" data-aos-duration="1000">
             Ready to Transform Your Space?
@@ -212,10 +313,10 @@ const Home = () => {
             Get a free quote today and let our experts bring your vision to life with quality painting and waterproofing services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-secondary">
+            <Link to="/contact" className="px-8 py-3 bg-white text-orange-600 rounded-lg hover:bg-opacity-90 font-semibold hover:shadow-lg transition-all duration-300">
               Get Free Quote
             </Link>
-            <a href={`tel:${contactNumber}`} className="btn-primary bg-white text-primary hover:bg-gray-100">
+            <a href={`tel:${contactNumber}`} className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 font-semibold transition-all duration-300">
               Call: {contactNumber}
             </a>
           </div>
