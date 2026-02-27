@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import amolImg from '../img/amol.jpeg';
-import vaibhavImg from '../img/vaibhav-waterprofing-pic.jpeg';
 import pravinImg from '../img/pravin-founder.jpeg';
 import logo2 from '../img/shreepainting-logo.png';
 
@@ -13,27 +12,71 @@ const About = () => {
       name: "Pravin Salunkhe",
       role: "Founder & Lead Contractor",
       image: pravinImg,
-      experience: "12+ Years"
+      experience: "12+ Years",
+      specialties: ["Project Management", "Quality Assurance", "Customer Relations"]
     },
     {
       name: "Amol Salunkhe",
       role: "Senior Painter",
       image: amolImg,
-      experience: "8+ Years"
+      experience: "8+ Years",
+      specialties: ["Interior Painting", "Exterior Painting", "Waterproofing"]
     },
-    {
-      name: "Vaibhav Salunkhe",
-      role: "Waterproofing Specialist",
-      image: vaibhavImg,
-      experience: "7+ Years"
-    }
   ];
 
   const achievements = [
     { number: "1500+", label: "Projects Completed" },
     { number: "12+", label: "Years Experience" },
     { number: "100%", label: "Client Satisfaction" },
-    { number: "50+", label: "Repeat Customers" }
+    { number: "500+", label: "Happy Families" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Shrikant NIkam",
+      role: "Homeowner - Pimpari",
+      text: "Shree Painting transformed our home beautifully. Professional team, quality materials, and completed on time. Highly recommended!",
+      rating: 5
+    },
+    {
+      name: "Shivani Patil",
+      role: "Property Manager",
+      text: "Exceptional service for our commercial building. The waterproofing work is outstanding and has prevented all water seepage issues.",
+      rating: 5
+    },
+    {
+      name: "Abhijit Deshmukh",
+      role: "Restaurant Owner",
+      text: "Best painters in the area! Attention to detail is remarkable. They handled our restaurant renovation perfectly.",
+      rating: 5
+    }
+  ];
+
+  const whyChooseUs = [
+    {
+      title: "Premium Quality Materials",
+      description: "We use only the finest paints and waterproofing products from trusted manufacturers for lasting results."
+    },
+    {
+      title: "Skilled & Experienced Team",
+      description: "Our professionals are trained and certified with years of experience in residential and commercial projects."
+    },
+    {
+      title: "Competitive Pricing",
+      description: "Get premium quality without breaking the bank. We offer transparent quotes with no hidden charges."
+    },
+    {
+      title: "Timely Delivery",
+      description: "We respect your time and complete projects within the agreed deadline consistently."
+    },
+    {
+      title: "Warranty & Guarantee",
+      description: "All our work comes with warranty, giving you peace of mind about the durability of our services."
+    },
+    {
+      title: "Excellent Customer Service",
+      description: "We're available for consultations, support, and follow-ups to ensure 100% customer satisfaction."
+    }
   ];
 
   return (
@@ -70,19 +113,22 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Founded in 2015, Shree Painting & Waterproofing Services began as a small family business 
+                  Founded in 2012, Shree Painting & Waterproofing Services began as a small family business 
                   with a simple mission: to provide high-quality painting and waterproofing solutions 
-                  that exceed customer expectations.
+                  that exceed customer expectations. What started with just Pravin and a vision has blossomed into something extraordinary.
                 </p>
                 <p>
-                  What started as a one-man operation has grown into a trusted team of skilled professionals 
-                  serving Pimpari Chinchwad and surrounding areas. We've completed over 500 projects, 
-                  ranging from residential homes to commercial buildings.
+                  Over a decade of dedicated service has seen us complete over 1,500 projects—from intimate 
+                  residential homes to sprawling commercial complexes across Pimpari Chinchwad and nearby regions. 
+                  Each project taught us something valuable, and each satisfied customer became part of our growing family.
                 </p>
                 <p>
-                  Our commitment to using premium materials, maintaining competitive pricing, and 
-                  delivering projects on time has earned us the trust of hundreds of satisfied customers 
-                  who continue to recommend our services to their friends and family.
+                  Today, we're proud to maintain our promise: premium materials, skilled craftsmanship, transparent pricing, 
+                  and respect for your time. Our success isn't measured in numbers alone—it's measured in 
+                  the trust of families who've invited us into their homes, and businesses who've chosen us for their most important spaces.
+                </p>
+                <p className="font-semibold text-gray-800">
+                  This is more than just a business for us. It's about creating spaces people love to be in.
                 </p>
               </div>
             </div>
@@ -138,19 +184,36 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
-              <div key={index} className="card-style text-center" data-aos="flip-right" data-aos-delay={`${index * 200}`}>
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+              <div key={index} className="card-style text-center hover:shadow-xl transition-shadow" data-aos="flip-right" data-aos-delay={`${index * 200}`}>
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary">
                   <img 
                     src={member.image} 
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
-                <p className="text-primary font-semibold mb-2">{member.role}</p>
-                <p className="text-gray-600">{member.experience}</p>
+                <h3 className="text-2xl font-bold text-gray-800 mb-1">{member.name}</h3>
+                <p className="text-primary font-semibold mb-2 text-lg">{member.role}</p>
+                <p className="text-gray-600 font-medium mb-4">{member.experience} in the industry</p>
+                
+                <div className="mb-4 pb-4 border-b border-gray-200">
+                  <p className="text-sm text-gray-500 uppercase font-semibold mb-3">Specialties</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {member.specialties.map((specialty, i) => (
+                      <span key={i} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 italic text-sm">
+                  {member.role === "Founder & Lead Contractor" 
+                    ? "Visionary leader ensuring every project exceeds expectations"
+                    : "Dedicated professional mastering the art of quality workmanship"}
+                </p>
               </div>
             ))}
           </div>
@@ -205,6 +268,67 @@ const About = () => {
                 We stay updated with the latest techniques and materials to provide the best possible results.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+              Why Choose Shree Painting?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+              Here's what sets us apart from the competition
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow" data-aos="zoom-in-up" data-aos-delay={`${index * 100}`}>
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-aos="fade-up">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+              Real feedback from real customers who've experienced our service
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 p-8 rounded-lg" data-aos="fade-up" data-aos-delay={`${index * 150}`}>
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
+                <div className="border-t pt-4">
+                  <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                  <p className="text-sm text-primary">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
