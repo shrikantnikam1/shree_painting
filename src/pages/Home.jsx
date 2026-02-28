@@ -8,19 +8,19 @@ const Home = () => {
     {
       title: "Interior Painting",
       description: "Transform your indoor spaces with professional interior painting services.",
-      image: "https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://5.imimg.com/data5/VT/AO/MY-9734509/residential-painting-service.jpg",
       features: ["Wall Preparation", "Premium Paints", "Clean Finish"]
     },
     {
       title: "Exterior Painting",
       description: "Protect and beautify your property's exterior with weather-resistant paints.",
-      image: "https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://dreamhomepaintingservice.com/images/exterior-home-painting-services-in-kolkata.jpg",
       features: ["Weather Protection", "Long-lasting", "Color Consultation"]
     },
     {
       title: "Waterproofing",
       description: "Complete waterproofing solutions for roofs, terraces, and basements.",
-      image: "https://images.pexels.com/photos/3964704/pexels-photo-3964704.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://paintmywalls.in/wp-content/uploads/2024/02/Application-of-Primer-Roof-Waterproofing-1024x768.jpg",
       features: ["Leak Prevention", "Moisture Control", "Long-term Protection"]
     }
   ];
@@ -266,7 +266,7 @@ const Home = () => {
             </div>
             <div data-aos="zoom-in" data-aos-duration="1000">
               <img 
-                src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://i.ytimg.com/vi/y_J2dBRzMCI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBK2y-R38Pep118keoOCq51jy73lg"
                 alt="Professional painting service in action"
                 className="rounded-xl shadow-2xl border-4 border-orange-200"
               />
