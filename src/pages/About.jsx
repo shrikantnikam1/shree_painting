@@ -147,20 +147,20 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 text-white">
+      <section className="relative bg-gradient-to-r from-orange-900 via-red-900 to-amber-900 text-white">
         <div 
           className="absolute inset-0 bg-black/30 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/3964704/pexels-photo-3964704.jpeg?auto=compress&cs=tinysrgb&w=1200')"
+            backgroundImage: "url('https://www.nerolac.com/sites/default/files/styles/1920x548/public/7-wall-painting-ideas-for-your-living-room-by-nerolac-main.jpg.webp?itok=KX8dSzoU')"
           }}
         ></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-3xl text-center">
             <img src={logo2} alt="Shree Painting Logo" className="h-20 mx-auto mb-4" data-aos="fade-down" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1000">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-200 via-yellow-100 to-amber-100 bg-clip-text text-transparent drop-shadow-lg" data-aos="fade-up" data-aos-duration="1000">
               About Shree Painting & Waterproofing Services
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-xl text-white drop-shadow-md">
               With over 12 years of experience in the painting and waterproofing industry, 
               we've built our reputation on quality workmanship and customer satisfaction.
             </p>
@@ -199,7 +199,7 @@ const About = () => {
             </div>
             <div data-aos="zoom-in" data-aos-duration="1000">
               <img 
-                src="https://images.pexels.com/photos/5691660/pexels-photo-5691660.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://goodhomes.wwmindia.com/content/2022/dec/wall-painting-design-david-pisnoy-on-unsplash1670857733.jpg"
                 alt="Our team at work"
                 className="rounded-lg shadow-lg w-full"
               />
