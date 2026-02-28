@@ -38,14 +38,14 @@ const Home = () => {
         ></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1000">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-out">
               Professional Painting & Waterproofing Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <p className="text-xl md:text-2xl mb-8 text-gray-200" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200" data-aos-easing="ease-out">
               Transform your spaces with quality workmanship and premium materials. 
               Serving Pimpari Chinchwad and surrounding areas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400" data-aos-easing="ease-out">
               <Link to="/contact" className="px-8 py-3 bg-white text-orange-600 rounded-lg hover:bg-opacity-90 font-semibold inline-block text-center hover:shadow-lg transition-all duration-300">
                 Get Free Quote
               </Link>
